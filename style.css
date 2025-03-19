@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic:wght@700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+a[target=_blank]:not(.noicon)::after {
+  content: "\f08e";
+  font: var(--fa-font-solid);
+  margin-left: 0.5em;
+}
+
+a {
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.7;
+}
+
+.hero {
+  padding: 80px;
+  text-align: center;
+}
+.hero__icon {
+  margin: 0 auto;
+  width: 320px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
+
+.gnav {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  border: solid #ecf081;
+  border-width: 0 2px;
+}
+.gnav__item {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+.gnav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 90%;
+  line-height: 1;
+  position: relative;
+  padding: 5px 0 15px;
+  color: #333;
+  text-decoration: none;
+  background: rgba(236, 240, 129, 0.5);
+  border: solid #ecf081;
+  border-width: 4px 2px;
+}
+.gnav__link i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  color: #b3cc57;
+}
+@media screen and (min-width: 767.1px) {
+  .gnav__link {
+    font-size: 110%;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+  }
+  .gnav__link i {
+    bottom: 0.4em;
+  }
+}
+
+.sectiontitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 240%;
+  padding: 30px;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  font-style: normal;
+  background: #b3cc57;
+  margin-bottom: 40px;
+  position: relative;
+}
+.sectiontitle::before, .sectiontitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #ecf081;
+  position: absolute;
+  left: 0;
+}
+.sectiontitle::before {
+  top: 5px;
+}
+.sectiontitle::after {
+  bottom: 5px;
+}
+
+.worktitle {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 120%;
+  line-height: 2;
+}
+.worktitle::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 2em;
+  border-radius: 3px;
+  background: #b3cc57;
+  vertical-align: bottom;
+}
+
+.commenttitle {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 105%;
+  line-height: 1;
+  text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.commenttitle::before, .commenttitle::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 1em;
+  border-radius: 50%;
+  background: #b3cc57;
+  vertical-align: bottom;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+.section p + p {
+  margin-top: 1.7em;
+}
+
+.youtube {
+  position: relative;
+}
+.youtube::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.youtube iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.point {
+  color: #ef746f;
+  font-weight: bold;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.comment__icon {
+  font-size: 60px;
+}
+.comment__text {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 4px;
+  position: relative;
+}
+.comment__text::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.comment--left .comment__icon {
+  order: 1;
+  color: #ffbe40;
+}
+.comment--left .comment__text {
+  order: 2;
+  margin-left: 20px;
+  background: #ffbe40;
+}
+.comment--left .comment__text::before {
+  border-right: 10px solid #ffbe40;
+  left: -9px;
+}
+.comment--right .comment__icon {
+  order: 2;
+  color: #ecf081;
+}
+.comment--right .comment__text {
+  order: 1;
+  margin-right: 20px;
+  background: #ecf081;
+}
+.comment--right .comment__text::before {
+  border-left: 10px solid #ecf081;
+  position: absolute;
+  right: -9px;
+}
+
+.imglink {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.imglink::after {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.imglink img {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s;
+}
+.imglink:hover {
+  opacity: 1;
+}
+.imglink:hover::after {
+  background: rgba(0, 0, 0, 0.4);
+}
+.imglink:hover img {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.footer {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #ecf081;
+}
+
+.flexbox {
+  display: flex;
+  flex: 0 0 auto;
+  max-width: 50%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.grid__item--left {
+  order: -1;
+}
+.grid__item--right {
+  order: 1;
+}
+
+@media screen and (min-width: 767.1px) {
+  .sponly {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pconly {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
