@@ -80,9 +80,47 @@ body {
   line-height: 1.7;
 }
 
+.contactlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.95rem;
+  position: fixed;
+  left: 0px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 5px;
+  z-index: 1001;
+  background: #ab3e5b;
+  line-height: 1.2;
+  bottom: -9999px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+@media screen and (min-width: 767.1px) {
+  .contactlink {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.contactlink.visible {
+  opacity: 1;
+  bottom: 0px;
+}
+
 .hero {
   padding: 80px;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .hero__icon {
   margin: 0 auto;

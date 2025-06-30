@@ -7,13 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css" />
+    <script src="./functions.js"></script>
+    <script>
+        window.onload = function() {
+            encode('me');
+        };
+    </script>
 </head>
 <body>
 <div id="wrapper">
+    <a href="https://docs.google.com/forms/create?hl=ja" target="_blank" id="contactLink" class="contactlink noicon">
+        <i class="fa-solid fa-envelope me-2"></i> お問い合わせはこちら
+    </a>
     <div class="hero mb-5">
         <img src="./images/profile.png" class="hero__icon">
         <p class="text-center">2022年2月からWebメディア『QuizX』の一員として活動<br>
             <a href="https://quizx.net/author/maguro/" target="_blank">https://quizx.net/author/maguro/</a></p>
+        <h1 class="commenttitle mt-5">お問い合わせ</h1>
+        <p>クイズ・イベントの企画制作、ボードゲーム制作など、お気軽にお問い合わせください！</p>
+        <div class="text-center">
+            <p class="d-inline-block mt-3 text-start">Email：<span id="me"></span><br>
+            <!-- 問い合わせフォーム：<a href="https://docs.google.com/forms/create?hl=ja" target="_blank">https://docs.google.com/forms/create?hl=ja</a></p> -->
+        </div>
     </div>
     <header id="header" class="header">
         <nav>
@@ -384,5 +399,17 @@
         <p><small>&copy; 2025 Masayoshi Kimura (K.MAGURO). All Rights Reserved.</small></p>
     </footer>
 </div>
+<script>
+const contactLink = document.getElementById("contactLink");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+    contactLink.classList.add("visible");
+    }
+    else{
+    contactLink.classList.remove("visible");
+    }
+});
+</script>
 </body>
 </html>

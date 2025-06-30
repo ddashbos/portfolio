@@ -49,9 +49,41 @@ body{
     font-family: "Noto Sans", sans-serif;
     line-height: $line-height;
 }
-
+.contactlink{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    font-weight: bold;
+    font-size:.95rem;
+    position: fixed;
+    left:0px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding:10px 5px;
+    z-index: 1001;
+    background: map-get($color, 'accent2');
+    line-height: 1.2;
+    bottom:-9999px;
+    opacity: 0;
+    transition: opacity .3s;;
+    @include pc(){
+        padding-top:20px;
+        padding-bottom:20px;
+    }   
+    &.visible{
+        opacity: 1;
+        bottom:0px;
+    }
+}
 .hero{
     padding:80px;
+    @include sp(){
+        padding-top:20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     text-align: center;
     &__icon{
         margin:0 auto;
